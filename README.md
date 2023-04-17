@@ -1,2 +1,2 @@
 # statbot
-statbot is a streamlit app helping users to retrieve data from the website of the Office of Statistics of Basel
+[statbot](https://lcalmbach-statbot-app-hfufuc.streamlit.app/) helps users to retrieve data from the website of the Office of Statistics of Basel. It uses the openAI API and adds context information to the user prompt. The context information consists of all available tables and their metadata. To prevent too much data to be sent to the openAI API with every prompt, each user request is broken down in two requests: the first request retrieves the general statistical theme and the second request a best match for the table. This way only metadata for the respective statistical theme is sent to the API.

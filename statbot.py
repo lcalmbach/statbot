@@ -21,7 +21,7 @@ model = "gpt-3.5-turbo"
 STATUS_OPTIONS = ['find_theme', 'find_product', ]
 TEMPERATURE = 0
 MAX_TOKENS = 2000
-dont_know = "Ich habe die Frage leider nicht verstanden oder keine entsprechende Tabelle finden können. Bitte geben sie doch nochmals ihre Frage ein."
+dont_know = "Ich habe deine Frage leider nicht verstanden oder keine entsprechende Tabelle finden können. Bitte versuche die Frage umzuformulieren."
 
 class StatBot():
     def __init__(self):
@@ -35,7 +35,7 @@ class StatBot():
         self.themen_list = ','.join(set(list(self.themes_df['themenbereich'])))
 
     def get_themes(self):
-        df = pd.read_csv('./webtabellen.csv', encoding='ANSI', sep=';')
+        df = pd.read_csv('./webtabellen.csv', sep=';')
         df.dropna(inplace=True)
         return df
 
