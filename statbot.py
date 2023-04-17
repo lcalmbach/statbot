@@ -141,7 +141,7 @@ class StatBot():
                 tables_df = self.get_tables(theme)
                 st.write("🤖 St@tBot:")
                 st.markdown(f'Sie finden Informationen zu diesem Thema in Datei [{table}]({url})')
-                st.markdown(f"Falls diese Referenz nicht die gewünschten Informationen enthalten, so gibt es in unseren Webtabellen folgende Tabellen zum Thema *{theme}*")
+                st.markdown(f"Falls diese Referenz nicht die gewünschten Informationen enthalten, so gibt es in den [Webtabellen](https://www.statistik.bs.ch/zahlen/tabellen.html) des Statistischen Amts Basel-Stadt folgende Tabellen zum Thema *{theme}*:")
                 for index, row in tables_df.iterrows():
                     st.markdown(f"- [{row['bezeichnung']}]({row['url']})")
             else:
